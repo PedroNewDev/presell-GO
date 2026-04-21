@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frei Gilson / Som do Monte - OFICIAL</title>
+
+    <!-- Utmify Google Pixel (conta Google Ads prosperidadesagrada.online) -->
+    <script>
+      window.googlePixelId = "69e24fda0551328f5312848b";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+      document.head.appendChild(a);
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", "Arial", sans-serif;
+            background-color: #0f0f0f;
+            color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .channel-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            padding: 24px 0;
+        }
+
+        .channel-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .channel-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .channel-avatar-text {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .channel-info {
+            flex: 1;
+        }
+
+        .channel-name {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .verified-badge {
+            width: 18px;
+            height: 18px;
+            background-color: #aaaaaa;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .channel-handle {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .channel-stats {
+            color: #aaaaaa;
+            font-size: 14px;
+        }
+
+        .subscribe-button {
+            background-color: #f1f1f1;
+            color: #0f0f0f;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 18px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .subscribe-button:hover {
+            background-color: #d9d9d9;
+        }
+
+        .live-badge {
+            background-color: #cc0000;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        .video-container {
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .video-info {
+            padding: 16px 0;
+        }
+
+        .video-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .video-metadata {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #aaaaaa;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+
+        .viewer-count {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .live-indicator {
+            width: 8px;
+            height: 8px;
+            background-color: #cc0000;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .description {
+            background-color: #272727;
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .description-title {
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .site-footer {
+            border-top: 1px solid #272727;
+            margin-top: 32px;
+            padding: 20px 0 24px;
+            text-align: center;
+        }
+
+        .site-footer .empresa {
+            color: #8a8a8a;
+            font-size: 11px;
+            line-height: 1.7;
+            margin-bottom: 6px;
+        }
+
+        .site-footer .empresa strong {
+            color: #c0c0c0;
+            font-weight: 600;
+        }
+
+        .site-footer .copy {
+            color: #666;
+            font-size: 10.5px;
+        }
+
+        .site-footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 10px 0 12px;
+        }
+
+        .site-footer .footer-links a {
+            color: #8a8a8a;
+            font-size: 11px;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .site-footer .footer-links a:hover {
+            color: #d0d0d0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0;
+            }
+
+            .channel-header {
+                padding: 12px 16px;
+                gap: 12px;
+                margin-bottom: 0;
+            }
+
+            .channel-avatar {
+                width: 40px;
+                height: 40px;
+            }
+
+            .channel-name {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .verified-badge {
+                width: 14px;
+                height: 14px;
+                font-size: 10px;
+            }
+
+            .channel-handle {
+                display: none;
+            }
+
+            .channel-stats {
+                font-size: 12px;
+            }
+
+            .subscribe-button {
+                padding: 8px 14px;
+                font-size: 13px;
+                border-radius: 20px;
+            }
+
+            .video-container {
+                border-radius: 0;
+                margin-bottom: 0;
+            }
+
+            .video-info {
+                padding: 12px 16px;
+            }
+
+            .video-title {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .live-badge {
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+
+            .video-metadata {
+                font-size: 13px;
+            }
+
+            .description {
+                margin: 0;
+                border-radius: 0;
+                padding: 14px 16px;
+                font-size: 13px;
+                max-height: 120px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .description::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 40px;
+                background: linear-gradient(transparent, #272727);
+            }
+
+            .description-title {
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+
+            .site-footer {
+                padding: 18px 16px 22px;
+                margin-top: 24px;
+            }
+
+            .site-footer .empresa {
+                font-size: 10.5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="channel-header">
+            <div class="channel-avatar">
+                <img src="https://saobentogrimorio.online/wp-content/uploads/2026/02/Design-sem-nome-14.png" alt="Frei Gilson">
+            </div>
+            <div class="channel-info">
+                <div class="channel-name">
+                    Frei Gilson / Som do Monte - OFICIAL
+                    <span class="verified-badge">✓</span>
+                </div>
+                <div class="channel-handle">@FreiGilsonSomdoMonteOFICIAL</div>
+                <div class="channel-stats">
+                    <span id="subscriberCount">8,74 mi</span> de inscritos • 3,1 mil vídeos
+                </div>
+            </div>
+            <button class="subscribe-button">Inscrever-se</button>
+        </div>
+
+        <div class="video-container">
+            <vturb-smartplayer id="vid-69e24ea4632cf9812cc76b1c" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
+            <script type="text/javascript">
+                var s=document.createElement("script");
+                s.src="https://scripts.converteai.net/e2456bb4-13d2-4485-91da-fb9ee530b6b7/players/69e24ea4632cf9812cc76b1c/v4/player.js";
+                s.async=!0;
+                document.head.appendChild(s);
+            </script>
+        </div>
+
+        <div class="video-info">
+            <div class="video-title">
+                Oração Sagrada do Grimório de São Bento
+                <span class="live-badge">AO VIVO</span>
+            </div>
+            <div class="video-metadata">
+                <div class="viewer-count">
+                    <span class="live-indicator"></span>
+                    <span id="viewerCount">8.469</span> pessoas assistindo agora
+                </div>
+                <span>•</span>
+                <span>Transmissão ao vivo iniciada</span>
+            </div>
+        </div>
+
+        <div class="description">
+            <div class="description-title">Sobre a transmissão</div>
+            Seja bem-vindo ao canal Frei Gilson / Som do Monte OFICIAL.<br><br>
+            Acompanhe nossa transmissão ao vivo antes que saia do ar.<br><br>
+            🙏 Junte-se a nós neste momento de oração e fé.<br>
+            ✝️ Compartilhe com seus amigos e familiares.
+        </div>
+
+        <footer class="site-footer">
+            <p class="empresa">
+                <strong>ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA</strong> · CNPJ: <strong>90.863.481/0001-51</strong><br>
+                R BURITI, 74 – 2 PISO – CENTRO – SANTA ROSA – RS – 98780-753 – Brasil
+            </p>
+            <div class="footer-links">
+                <a href="https://prosperidadesagrada.online/termos/">Termos de Uso</a>
+                <a href="https://prosperidadesagrada.online/privacidade/">Política de Privacidade</a>
+                <a href="https://prosperidadesagrada.online/disclaimer/">Disclaimer</a>
+            </div>
+            <p class="copy">© 2026 ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Tratamento de erro na imagem do avatar
+        const avatarImg = document.querySelector('.channel-avatar img');
+        if (avatarImg) {
+            avatarImg.onerror = function() {
+                this.style.display = 'none';
+                const avatarDiv = document.querySelector('.channel-avatar');
+                if (avatarDiv && !avatarDiv.querySelector('.channel-avatar-text')) {
+                    const textFallback = document.createElement('span');
+                    textFallback.className = 'channel-avatar-text';
+                    textFallback.textContent = 'FG';
+                    avatarDiv.appendChild(textFallback);
+                }
+            };
+        }
+
+        // Contador de visualizações iniciando em 8469
+        let viewerCount = 8469;
+        const viewerCountElement = document.getElementById('viewerCount');
+
+        function updateViewerCount() {
+            const change = Math.floor(Math.random() * 22) + 16; // 16 a 37
+            viewerCount = viewerCount + change;
+            viewerCountElement.textContent = viewerCount.toLocaleString('pt-BR');
+        }
+
+        function scheduleNextUpdate() {
+            const delay = 2000 + Math.random() * 2000;
+            setTimeout(() => {
+                updateViewerCount();
+                scheduleNextUpdate();
+            }, delay);
+        }
+
+        scheduleNextUpdate();
+
+        // Efeito de hover no botão de inscrever
+        const subscribeButton = document.querySelector('.subscribe-button');
+        let isSubscribed = false;
+
+        subscribeButton.addEventListener('click', () => {
+            if (!isSubscribed) {
+                subscribeButton.textContent = 'Inscrito';
+                subscribeButton.style.backgroundColor = '#272727';
+                subscribeButton.style.color = '#f1f1f1';
+                isSubscribed = true;
+            } else {
+                subscribeButton.textContent = 'Inscrever-se';
+                subscribeButton.style.backgroundColor = '#f1f1f1';
+                subscribeButton.style.color = '#0f0f0f';
+                isSubscribed = false;
+            }
+        });
+    </script>
+</body>
+</html>
